@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int x = 9, y = 6;
+            int x = 9, y = -6;
             Console.WriteLine($"{x} + {y} = {x + y}");
             Console.WriteLine($"{x} - {y} = {x - y}");
             Console.WriteLine($"{x} * {y} = {x * y}");
