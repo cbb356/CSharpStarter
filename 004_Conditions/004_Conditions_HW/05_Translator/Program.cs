@@ -28,7 +28,7 @@ namespace Translator
                 _ => "isAbsent"
             };
 
-            if (translatedWord == "isAbsent_")
+            if (translatedWord == "isAbsent")
             {
                 Console.WriteLine($"Переклад цього слова англійською в словнику відсутній");
             }
