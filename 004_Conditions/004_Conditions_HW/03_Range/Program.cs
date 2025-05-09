@@ -18,7 +18,7 @@ namespace Range
                 {
                     case < 0:
                     case > 100:
-                        Console.WriteLine($"Entered value is {number}; out of an acceptable range.");
+                        Console.WriteLine($"Entered value {number} is out of an acceptable range.");
                         break;
                     case < 15:
                         Console.WriteLine($"Entered value {number} is in range [0-14]");
