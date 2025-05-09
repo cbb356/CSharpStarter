@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int operand1 = 6, operand2 = 0;
+            int operand1 = 6, operand2 = -4;
             Console.WriteLine("Enter the arithmetic operation (+, -, *, /, %):");
             string sign = Console.ReadLine();
 
