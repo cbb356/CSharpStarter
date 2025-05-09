@@ -11,7 +11,7 @@ namespace Translator
             Console.InputEncoding = Encoding.Unicode;
 
             Console.WriteLine("Введіть слово українською:");
-            string inputWord = Console.ReadLine().ToLower();
+            string inputWord = Console.ReadLine().ToLower().Trim();
 
             string translatedWord = inputWord switch
             {
