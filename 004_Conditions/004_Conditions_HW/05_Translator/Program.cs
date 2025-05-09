@@ -25,10 +25,10 @@ namespace Translator
                 "спекотний" => "hot",
                 "сонячний" => "sunny",
                 "хмарний" => "cloudy",
-                _ => "відсутній"
+                _ => "isAbsent"
             };
 
-            if (translatedWord == "відсутній")
+            if (translatedWord == "isAbsent")
             {
                 Console.WriteLine($"Переклад цього слова англійською в словнику відсутній");
             }
