@@ -2,6 +2,26 @@
 {
     internal class Program
     {
+        static double Add(double a, double b)
+        {
+            return a + b;
+        }
+
+        static double Sub(double a, double b)
+        {
+            return a - b;
+        }
+
+        static double Mul(double a, double b)
+        {
+            return a * b;
+        }
+
+        static double Div(double a, double b)
+        {
+            return a / b;
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Input first number A:");
@@ -57,26 +77,6 @@
             }
 
             Console.WriteLine($"The result of {a} {operand} {b} = {result}");
-        }
-
-        static double Add(double a, double b)
-        {
-            return a + b;
-        }
-
-        static double Sub(double a, double b)
-        {
-            return a - b;
-        }
-
-        static double Mul(double a, double b)
-        {
-            return a * b;
-        }
-
-        static double Div(double a, double b)
-        {
-            return a / b;
         }
     }       
 }
