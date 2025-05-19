@@ -2,57 +2,62 @@
 {
     internal class Program
     {
-        static void DebtPay(ref int debt, int payment)
+        static void PaymentProcess(ref decimal debt, decimal payment)
         {
+            Console.WriteLine($"The payment has been accepted");
             debt -= payment;
             if (debt > 0)
             {
-                Console.WriteLine($"The sum of debt: {debt}");
+                Console.WriteLine($"The remaining debt amount is: {debt}");
             }
             else if (debt < 0)
             {
-                Console.WriteLine($"The debt is paid off"); 
-                Console.WriteLine($"The sum of overpayment: {debt}");
+                Console.WriteLine($"The loan has been paid with an overpayment: {-debt}");
             }
             else
             {
-                Console.WriteLine($"The debt is paid off");
+                Console.WriteLine($"The loan has been paid completely");
             }
         }
         static void Main(string[] args)
         {
-            int debt = 700;
-            int payment = 0;
+            const int paymentsRequired = 7;
+            const decimal monthlyPaymentAmount = 100m;
+            const decimal totalLoanAmount = paymentsRequired * monthlyPaymentAmount;
+            decimal remainingDebt = totalLoanAmount;
+            decimal paymentAmount = 0m;
 
-            for (int i = 1; i <= 7; i++)
+            Console.WriteLine($"The total loan amount is: {totalLoanAmount}");
+            Console.WriteLine($"{paymentsRequired} payments of {monthlyPaymentAmount} are expected");
+
+            for (int i = 1; i <= paymentsRequired; i++)
             {
-                if (debt <= 0)
+                if (remainingDebt <= 0)
                 {
                     break;
                 }
 
-                //Input sum of payment until it is valid
+                //Input valid payment amount
                 bool validPayment = false;
                 while(!validPayment)
                 {
-                    Console.WriteLine($"Input sum of {i} payment");
-                    if ((int.TryParse(Console.ReadLine(), out payment)) && payment >= 0)
+                    Console.Write($"\nInput amount of the payment {i}: ");
+                    if ((decimal.TryParse(Console.ReadLine(), out paymentAmount)) && paymentAmount >= 0)
                     {
                         validPayment = true;
-                        Console.WriteLine($"{i} payment: {payment}");
                     }
                     else
                     {
-                        Console.WriteLine("Wrong input for payment");
+                        Console.WriteLine("Wrong input for the payment amount");
                     }
                 }
 
-                DebtPay(ref debt, payment);
+                PaymentProcess(ref remainingDebt, paymentAmount);
             }
             
-            if (debt > 0)
+            if (remainingDebt > 0)
             {
-                Console.WriteLine("The debt is NOT paid off on time");
+                Console.WriteLine("The loan was not paid on time");
             }
         }
     }
