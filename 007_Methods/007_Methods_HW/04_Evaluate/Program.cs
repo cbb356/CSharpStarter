@@ -47,7 +47,6 @@
             else if(number < 0)
             {
                 Console.WriteLine($"{number} is a negative number");
-
             }
             else
             {
