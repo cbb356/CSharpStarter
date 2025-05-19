@@ -1,4 +1,4 @@
-﻿namespace Debt
+﻿namespace Loan
 {
     internal class Program
     {
