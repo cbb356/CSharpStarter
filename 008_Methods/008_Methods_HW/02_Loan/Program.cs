@@ -19,6 +19,7 @@
                 Console.WriteLine($"The loan has been paid completely");
             }
         }
+
         static void Main(string[] args)
         {
             const int paymentsRequired = 7;
