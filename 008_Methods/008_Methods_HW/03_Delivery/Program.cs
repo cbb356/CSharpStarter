@@ -4,7 +4,7 @@
     {
         static int CalculateFactorial (int x)
         {
-            if (x == 0)
+            if (x <= 1)
             {
                 return 1;
             }
@@ -24,6 +24,9 @@
             }
 
             Console.WriteLine($"Number of delivery variants: {CalculateFactorial(clientsNumber)}");
+
+            // Delay.
+            Console.ReadKey();
         }
     }
 }

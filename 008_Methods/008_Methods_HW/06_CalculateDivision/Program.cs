@@ -12,6 +12,9 @@
         static void Main(string[] args)
         {
             Calculate(4, -11, 265);
+
+            // Delay.
+            Console.ReadKey();
         }
     }
 }

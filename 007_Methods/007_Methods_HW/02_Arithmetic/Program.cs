@@ -77,6 +77,9 @@
             }
 
             Console.WriteLine($"The result of {a} {operation} {b} = {result}");
+
+            // Delay.
+            Console.ReadKey();
         }
     }       
 }

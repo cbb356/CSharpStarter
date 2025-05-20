@@ -60,6 +60,9 @@
             {
                 Console.WriteLine("The loan was not paid on time");
             }
+
+            // Delay.
+            Console.ReadKey();
         }
     }
 }

@@ -25,6 +25,9 @@
 
             double result = Exchange(amount, rate);
             Console.WriteLine($"{amount} EUR converted at a rate of {rate} equals {result:F2} UAH");
+
+            // Delay.
+            Console.ReadKey();
         }        
     }
 }

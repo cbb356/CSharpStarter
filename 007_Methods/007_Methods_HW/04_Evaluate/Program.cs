@@ -63,6 +63,9 @@
             CheckDivisibility(number, 3);
             CheckDivisibility(number, 6);
             CheckDivisibility(number, 9);
+
+            // Delay.
+            Console.ReadKey();
         }
 
         static void Main(string[] args)
