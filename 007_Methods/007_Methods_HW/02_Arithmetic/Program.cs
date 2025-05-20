@@ -41,8 +41,8 @@
             double result;
 
             Console.WriteLine("Input operand (+ - * /):");
-            string operand = Console.ReadLine().Trim();
-            switch (operand)
+            string operation = Console.ReadLine().Trim();
+            switch (operation)
             {
                 case "+":
                 {
@@ -71,12 +71,12 @@
                 }
                 default:
                 {
-                    Console.WriteLine("You entered a wrong operand");
+                    Console.WriteLine("You entered a wrong arithmetic operation");
                     return;
                 }
             }
 
-            Console.WriteLine($"The result of {a} {operand} {b} = {result}");
+            Console.WriteLine($"The result of {a} {operation} {b} = {result}");
         }
     }       
 }
