@@ -42,14 +42,14 @@
                 bool validPayment = false;
                 while(!validPayment)
                 {
-                    Console.Write($"\nInput amount of the payment {i}: ");
+                    Console.Write($"\nPlease enter amount of the payment {i}: ");
                     if ((decimal.TryParse(Console.ReadLine(), out paymentAmount)) && paymentAmount >= 0)
                     {
                         validPayment = true;
                     }
                     else
                     {
-                        Console.WriteLine("Wrong input for the payment amount");
+                        Console.WriteLine("Invalid payment amount");
                     }
                 }
 
