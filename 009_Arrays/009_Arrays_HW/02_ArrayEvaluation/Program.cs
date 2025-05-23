@@ -17,7 +17,52 @@
             Console.WriteLine();
         }
 
-        static int[] OddNumbersArray(int[] array)
+        static int GetMaxValue(int[] array)
+        {
+            int maxValue = array[0];
+            for (int i = 1; i < array.Length; i++)
+            {   
+                if (maxValue <= array[i])
+                {
+                    maxValue = array[i];
+                }
+            }
+            return maxValue;
+        }
+
+        static int GetMinValue(int[] array)
+        {
+            int minValue = array[0];
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (minValue >= array[i])
+                {
+                    minValue = array[i];
+                }
+            }
+            return minValue;
+        }
+
+        static int GetArraySum(int[] array)
+        {
+            int sum = array[0];
+            for (int i = 1; i < array.Length; i++)
+            {
+                sum += array[i];
+            }
+            return sum;
+        }
+        static double GetArrayAverage(int[] array)
+        {
+            int sum = array[0];
+            for (int i = 1; i < array.Length; i++)
+            {
+                sum += array[i];
+            }
+            return (double)sum / array.Length;
+        }
+
+        static int[] GetArrayOddNumbers(int[] array)
         {
             int oddCount = 0;
 
@@ -62,16 +107,11 @@
             }
 
             ShowArray("Elements of the array: ", array);
-
-            Console.WriteLine($"Maximum value: {array.Max()}");
-            Console.WriteLine($"Minimum value: {array.Min()}");
-            Console.WriteLine($"Sum of all array elements: {array.Sum()}");
-            Console.WriteLine($"Average value: {array.Average()}");
-
-            //Create subarray with odd numbers only
-            int[] oddNumbersArray = OddNumbersArray(array);
-            ShowArray("Odd values: ", oddNumbersArray);
-
+            Console.WriteLine($"Maximum value: {GetMaxValue(array)}");
+            Console.WriteLine($"Minimum value: {GetMinValue(array)}");
+            Console.WriteLine($"Sum of all array elements: {GetArraySum(array)}");
+            Console.WriteLine($"Average value: {GetArrayAverage(array)}");
+            ShowArray("Odd values: ", GetArrayOddNumbers(array));
             Console.WriteLine();
 
             // Delay.
